@@ -1,37 +1,41 @@
 import math
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
+
+
 # First example
 def add(a, b):
     return a + b
 
-def subtract(a,b):
+
+def sub(a, b):
     return a - b
 
-def multiply(a, b):
+
+def mul(a, b):
     return a * b
 
-def divide(a,b):
+
+def div(a, b):
     try:
         c = a / b
         return c
     except ZeroDivisionError as e:
         print(e)
 
-def logarithm(a,b):
+
+def log(a, b):
     try:
-        c = math.log(b,a)
+        c = math.log(b, a)
         return c
     except ValueError as e:
         print(e)
 
-def exponent(a,b):
+
+def exp(a, b):
     return a ** b
-
-
-
-
