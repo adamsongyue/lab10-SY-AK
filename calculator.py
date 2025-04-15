@@ -36,11 +36,11 @@ def mul(a, b):
 
 
 def div(a, b):
-    try:
-        c = a / b
-        return c
-    except ZeroDivisionError as e:
-        print(e)
+    if a == 0:
+        raise ZeroDivisionError
+
+    c = b / a
+    return c
 
 
 def logarithm(a, b):
