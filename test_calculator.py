@@ -3,9 +3,9 @@ import unittest
 from calculator import *
 
 
-# https://github.com/newmanhw/lab10-swe
-# Partner 1: Newman Waters
-# Partner 2: Cher Huang
+# https://github.com/adamsongyue/lab10-SY-AK
+# Partner 1: Artur Kashafutdinov
+# Partner 2: Yue, Song
 
 
 class TestCalculator(unittest.TestCase):
