@@ -1,7 +1,8 @@
-import math
 # https://github.com/adamsongyue/lab10-SY-AK
 # Partner 1: Artur Kashafutdinov
 # Partner 2: Yue, Song
+import math
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
