@@ -8,11 +8,12 @@ One function per operation, in order.
 """
 
 def square_root(a):
-    try:
-        c = math.sqrt(a)
-        return c
-    except ValueError as e:
-        print(e)
+
+    if a < 0:
+        raise ValueError
+    c = math.sqrt(a)
+    return c
+
 
 def hypotenuse(a,b):
     return math.hypot(a,b)
@@ -40,12 +41,11 @@ def div(a, b):
 
 
 def logarithm(a, b):
-    try:
-        c = math.log(b, a)
-        return c
-    except ValueError as e:
-        print(e)
+    if a <= 0 or a == 1 or b <= 0:
+        raise ValueError
+    return math.log(b,a)
 
 
 def exp(a, b):
     return a ** b
+
