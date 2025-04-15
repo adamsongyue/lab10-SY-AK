@@ -1,13 +1,25 @@
 import unittest
+
 from calculator import *
+
+
+# https://github.com/newmanhw/lab10-swe
+# Partner 1: Newman Waters
+# Partner 2: Cher Huang
+
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+    def test_add(self):  # 3 assertions
+        self.assertEqual(add(3, 9), 12)
+        self.assertEqual(add(100, 10000), 10100)
+        self.assertNotEqual(add(80, 90), 100)
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
+    def test_subtract(self):  # 3 assertions
+        self.assertNotEqual(subtract(100, 10), 30)
+        self.assertNotEqual(subtract(88, 55), 20)
+        self.assertEqual(subtract(71, 14), 57)
+
     # ##########################
 
     ######## Partner 1
@@ -19,20 +31,22 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+    def test_divide_by_zero(self):  # 1 assertion
+        with self.assertRaises(ZeroDivisionError): div(5, 0)
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+    def test_logarithm(self):  # 3 assertions
+        self.assertEqual(logarithm(2, 4), 2)
+        self.assertEqual(logarithm(4, 256), 4)
+        self.assertNotEqual(logarithm(9, 81), 3)
 
-    # def test_log_invalid_base(self): # 1 assertion
+    def test_log_invalid_base(self):  # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(0, 10)
+
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
-    
+
     ######## Partner 1
     # def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
@@ -50,6 +64,7 @@ class TestCalculator(unittest.TestCase):
     #     # Test basic function
     #     fill in code
     ##########################
+
 
 # Do not touch this
 if __name__ == "__main__":
